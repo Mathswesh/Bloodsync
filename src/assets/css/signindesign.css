@@ -1,0 +1,227 @@
+
+img {
+    object-fit: cover;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 992px) {
+    .container-fluid {
+        flex-direction: column;
+    }
+
+    .row {
+        height: 50%;
+    }
+
+    img {
+        display: block;
+    }
+}
+.signincontainer{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: red;
+}
+/* Video */
+#signinbg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    /* Add a dark overlay effect */
+}
+.signincontainerwrap{
+    z-index: 10;
+    position: relative;
+    top: -95vh;
+}
+/* Button */
+
+.container {
+    height: 90vh;
+}
+
+.login-text {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: black;
+    font-weight: 600;
+}
+
+.forgotpass {
+    color: rgba(0, 0, 0, 0.847);
+    cursor: pointer;
+    text-align: left;
+    display: block;
+}
+
+.signup a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+/*  */
+
+.rightsection {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    /* filter: blur(10px); */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Login */
+.wave-group {
+    position: relative;
+    /* filter: blur(10px); */
+
+}
+
+.wave-group .input {
+    font-size: 20px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    /* Adjusted to be 100% width */
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+
+.wave-group .input:focus {
+    outline: none;
+}
+
+.wave-group .label {
+    /* color: #999; */
+    font-size: 22px;
+    font-weight: 700;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+    color: black;
+}
+
+.wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave-group .input:focus~label .label-char,
+.wave-group .input:valid~label .label-char {
+    transform: translateY(-20px);
+    font-size: 20px;
+    /* color: #5264AE; */
+    filter: brightness(10px);
+}
+
+.wave-group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* Adjusted to 100% width */
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    /* background: #5264AE; */
+    transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+    left: 0;
+}
+
+.wave-group .bar:after {
+    right: 0;
+}
+
+.wave-group .input:focus~.bar:before,
+.wave-group .input:focus~.bar:after {
+    width: 100%;
+    /* Now spans 100% of the input width */
+}
+
+
+/* Login Button */
+.signincontainer .btn {
+
+    height: 2.5em;
+    margin-top: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.816);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.signincontainer button:hover {
+    color: black;
+}
+
+.signincontainer button:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.238);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.signincontainer button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/* Toggle Pass */
+.signincontainer.toggle-password {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.signincontainer.toggle-password i {
+    font-size: 1.25rem;
+    color: black;
+
+}
+
+/* remember me */
+.signincontainer .checkbox {
+    color: black;
+    font-size: 20px;
+}
+
+.signincontainer .check {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+/*  */

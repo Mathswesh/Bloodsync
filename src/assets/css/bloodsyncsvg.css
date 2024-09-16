@@ -1,0 +1,29 @@
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+    stroke-miterlimit: 10;
+}
+
+.cls-1,
+.cls-3 {
+    stroke: red;
+}
+
+.cls-1,
+.cls-4 {
+    fill: #fff;
+}
+
+.cls-2 {
+    fill:white;
+    /* stroke: #f90000; */
+}
+
+.cls-3 {
+    fill: red;
+}
+
+.cls-4 {
+    stroke: #fff;
+}

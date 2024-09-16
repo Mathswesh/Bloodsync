@@ -1,0 +1,14 @@
+
+.errorwrap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffc84c;
+}
+
+.errorpic {
+    height: 50vh;
+    box-shadow: 1px  1px 100px black;
+}
