@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div class="text-white p-3 grid grid-cols-4 grid-rows-1  bg-gradient-to-r from-[#6f0000] to-[#200122]">
+    <div class="font-serif text-white p-3 grid grid-cols-4 grid-rows-1  bg-gradient-to-r from-[#6f0000] to-[#200122]">
         <div class="items-center justify-center flex col-span-1 row-span-1">
             <ul className='text-[20px]'>
                 <li className='mb-3'>About us <div className='w-[80px] h-[2px] bg-red-600'></div></li>

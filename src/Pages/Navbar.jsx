@@ -2,7 +2,7 @@ import { useState } from 'react'
 export const Navbar = () => {
 
   return (
-    <div className="bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center">
+    <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center">
       <div className='w-[1200px] pt-3 pb-3 text-white items-center grid grid-cols-12 grid-rows-1'>
         <div className="row-span-1 col-span-6 text-3xl">BLOODSYNC</div>
         <div className='col-span-5'>
