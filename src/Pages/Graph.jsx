@@ -34,10 +34,10 @@ export const Graph = () => {
   return (
     <div>
       <div class="grid grid-cols-3 grid-rows-3 gap-3">
-        <div class="items-center justify-center flex col-span-2 row-span-2 rounded-md bg-white"><Bar data={data}/></div>
-        <div class="items-center justify-center flex col-span-1 row-span-1 rounded-md bg-white"><Pie data={data}/></div>
-        <div class="items-center justify-center flex col-span-1 row-span-2 rounded-md bg-white"><PolarArea data={data}/></div>
-        <div class="items-center justify-center flex col-span-2 row-span-1 rounded-md bg-white"><Line data={data}/></div>
+        <div class="items-center justify-center flex col-span-2 row-span-2 rounded-md bg-white h-[500px]"><Bar data={data}/></div>
+        <div class="items-center justify-center flex col-span-1 row-span-1 rounded-md bg-white h-[250px]"><Pie data={data}/></div>
+        <div class="items-center justify-center flex col-span-1 row-span-2 rounded-md bg-white h-[500px]"><PolarArea data={data}/></div>
+        <div class="items-center justify-center flex col-span-2 row-span-1 rounded-md bg-white h-[250px]"><Line data={data}/></div>
       </div>
     </div>
   )
