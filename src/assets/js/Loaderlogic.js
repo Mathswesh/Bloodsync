@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect , useState } from 'react'
-import { Loader} from '../loader/Loader'
+import { Loader} from '../../loader/Loader'
 
 export const Loaderlogic = () => {
     const [text , setText] = useState('')

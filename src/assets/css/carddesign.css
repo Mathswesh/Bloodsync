@@ -1,0 +1,21 @@
+  .card {
+	text-align: center;
+	height: 600px;
+	width: 100%;
+	background: #fff;
+	position: relative;
+  }
+  .card h1 {
+	margin: 0;
+  }
+  .card:nth-child(even) {
+	background: #808080;
+  }
+  .card:nth-child(1) {
+	position: fixed;
+	top: 0px;
+  }
+  .card:nth-child(2) {
+	margin-top: 600px;
+  }
+  
