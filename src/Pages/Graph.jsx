@@ -24,7 +24,7 @@ export const Graph = () => {
         label: "Total donated ",
         data: [63342, 42342, 32344, 22344, 67867, 56757],
         borderColor: ["black"],
-        backgroundColor: ["red",],
+        backgroundColor: ["rgb(0, 150, 255)",],
         pointBackgroundColor: "rgba(255, 206, 86, 1)",
         borderWidth: 1,
       },

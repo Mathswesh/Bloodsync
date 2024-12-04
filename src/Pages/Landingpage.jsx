@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import img3 from '../assets/images/img1.png'
 import { Card } from './Card';
 import { Graph } from './Graph';
+import { Getapp } from './Getapp';
 
 export const Landingpage = () => {
     return (
@@ -21,7 +22,7 @@ export const Landingpage = () => {
                     </div>
                     <div className="flex items-center justify-end h-[500px]"><img src={img3} alt="" className='w-[1000px] h-[450px]' /></div>
                 </div>
-                <marquee className="text-[27px] bg-white w-[1515px] relative right-[155px]" behavior="" direction="">“ Let’s Donate Blood ,Some one is Waiting for You. Hurry up ! “</marquee>
+                <marquee className="text-[27px] bg-white w-[1515px] relative right-[155px] z-10" behavior="" direction="">“ Let’s Donate Blood ,Some one is Waiting for You. Hurry up ! “</marquee>
                 {/* cards */}
                 <div className="pt-[35px] grid grid-cols-3 gird-rows-1">
                     <div className="container bg-red-800 w-[395px] h-[100px]">
@@ -75,13 +76,7 @@ export const Landingpage = () => {
                     {/* <Card/> */}
                 </div>
                 <Graph/>
-                <div class="container p-5 w-[1000px] mx-auto px-4 md:px-8 lg:px-16 grid grid-cols-2 grid-rows-2 gap-3">
-                    <div class="items-center justify-center flex col-span-2 row-span-1 rounded-md">
-                        <div className="container text-[30px] h-[100px] text-white flex justify-center items-center">Get the App from Playstore</div>
-                    </div>
-                    <div class="items-center justify-center flex col-span-1 row-span-1 rounded-md bg-red-900"><img src={img3} alt="" className='w-[100px]' /></div>
-                    <div class="items-center justify-center flex col-span-1 row-span-1 rounded-md bg-red-900"><img src={img3} alt="" className='w-[100px]' /></div>
-                </div>
+                <Getapp/>
             </div>
         </div>
     )
