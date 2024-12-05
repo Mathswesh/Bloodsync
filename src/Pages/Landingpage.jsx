@@ -9,7 +9,7 @@ export const Landingpage = () => {
     return (
         <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center overflow-x-hidden">
             {/* main container of landing page */}
-            <div className='w-[1200px]'>
+            <div className='w-[1200px] md:'>
                 <div className='flex h-[500px]'>
                     <div className="text-cyan-300 flex-row justify-between items-center mt-[100px]">
                         <div className="mt-[40px] text-xl">Blood Donate Awarnesss</div>
