@@ -35,13 +35,16 @@ export const Passwordreset = () => {
           </div>
 
           <div>
-            <button
+              <button className="w-full py-2 px-4 bg-[#6f0000] text-white rounded-md hover:bg-[#200122] disabled:bg-gray-400">
+                <Link to="/otppage">SUBMIT</Link>
+              </button>
+            {/* <button
               type="submit"
               disabled={isSubmitting}
               className="w-full py-2 px-4 bg-[#6f0000] text-white rounded-md hover:bg-[#200122] disabled:bg-gray-400"
             >
               {isSubmitting ? 'Submitting...' : 'Submit'}
-            </button>
+            </button> */}
           </div>
         </form>
 

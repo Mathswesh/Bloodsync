@@ -82,7 +82,7 @@ export const Navbar = () => {
                   to="/logout"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
-                  Logout
+                  <button>LogOut</button>
                 </Link>
               </div>
             )}
@@ -93,9 +93,8 @@ export const Navbar = () => {
       {/* Sidebar */}
       <div
         id="sidebar"
-        className={`backdrop-blur-2xl fixed left-0 top-0 h-full w-64  shadow-lg transform transition-transform duration-300 z-20 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`backdrop-blur-2xl fixed left-0 top-0 h-full w-64  shadow-lg transform transition-transform duration-300 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <ul className="p-4 text-white space-y-4 text-base">
           <li>

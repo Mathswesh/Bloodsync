@@ -1,13 +1,18 @@
-import React from 'react'
+import React, {useState , useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import { signin } from '../services/userservice'
 import { Link } from 'react-router-dom'
-
+import { CustomLoder } from './CustomLoder'
 export const Signup = () => {
+  
+  // method 1
+  // const [isLoding, setisLoding] = useState(false);
+  
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   const submitHandler = async (data) => {
-    console.log(data)
+    // console.log(data)
+    // setisLoding(true);
     signin(data)
       .then((resp) => {
         console.log(resp)
@@ -16,10 +21,29 @@ export const Signup = () => {
       .catch((errors) => {
         console.log("error", errors)
       })
+      // setisLoding(false);
   }
 
+  // method 2
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a data fetch
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // 3 seconds
+    
+    return () => clearTimeout(timer); // Cleanup timer
+  }, []);
+
+  if (isLoading) {
+    return <CustomLoder />;
+  }
+  
   return (
     <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen">
+      {/* {isLoding && <CustomLoder/>} */}
+
       <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">Sign Up</h2>
         <p className="text-sm sm:text-base text-gray-600 text-center mb-6">Welcome back! Please enter your details.</p>
