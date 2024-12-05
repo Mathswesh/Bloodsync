@@ -20,26 +20,11 @@ export const Signin = () => {
 
   
   return (
-      <div className="bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen">
+      <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen">
         <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-center text-gray-800">Sign In</h2>
           <p className="text-sm text-gray-600 text-center mb-6">Welcome back! Please enter your details.</p>
           <form className="space-y-4" onSubmit={handleSubmit(submintHandler)}>
-            {/* Email Input */}
-            <div>
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-                UserName
-              </label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                required
-                className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                {...register("username")}
-              />
-            </div>
-            
             {/* Email Input */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">

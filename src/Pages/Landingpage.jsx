@@ -13,16 +13,16 @@ export const Landingpage = () => {
                 <div className='flex h-[500px]'>
                     <div className="text-cyan-300 flex-row justify-between items-center mt-[100px]">
                         <div className="mt-[40px] text-xl">Blood Donate Awarnesss</div>
-                        <div className="mt-[40px] text-4xl">"Your blood donation can give a</div>
+                        <div className="mt-[40px] text-4xl">" Your blood donation can give a</div>
                         <div className="mt-[0px] text-4xl">precious smile to someone's face."</div>
                         <p className='mt-[40px] text-2xs'></p>
-                        <div >Blood donation is a simple act of kindness that can save lives and bring hope to those in need.
+                        <div>Blood donation is a simple act of kindness that can save lives and bring hope to those in need.
                             By donating blood, you help ensure a steady supply for emergencies and critical medical treatments.</div>
                         <button className='mt-[30px] text-black bg-cyan-300 rounded-3xl w-40 h-10 text-[20px] mx-3'>Get Started</button>
                     </div>
                     <div className="flex items-center justify-end h-[500px]"><img src={img3} alt="" className='w-[1000px] h-[450px]' /></div>
                 </div>
-                <marquee className="text-[27px] bg-white w-[1515px] relative right-[155px] z-10" behavior="" direction="">“ Let’s Donate Blood ,Some one is Waiting for You. Hurry up ! “</marquee>
+                <marquee className="text-[27px] bg-white w-[1515px] relative right-[155px] z-10" behavior="" direction="">" Let’s Donate Blood , Some one is Waiting for You. Hurry up ! "</marquee>
                 {/* cards */}
                 <div className="pt-[35px] grid grid-cols-3 gird-rows-1">
                     <div className="container bg-red-800 w-[395px] h-[100px]">

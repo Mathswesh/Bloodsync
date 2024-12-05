@@ -19,12 +19,38 @@ export const Signup = () => {
   }
 
   return (
-      <div className="bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen">
+      <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen">
         <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up</h2>
           <p className="text-sm text-gray-600 text-center mb-6">Welcome back! Please enter your details.</p>
           <form className="space-y-4" onSubmit={handleSubmit(submintHandler)}>
             {/* Email Input */}
+            <div>
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+                FirstName
+              </label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                required
+                className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                {...register("firstname")}
+              />
+            </div>
+            <div>
+              <label htmlFor="lastname" className="block text-sm font-medium text-gray-700">
+                LastName
+              </label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                required
+                className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                {...register("lastname")}
+              />
+            </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email
