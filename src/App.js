@@ -6,6 +6,7 @@ import { Signin } from './Pages/Signin';
 import { Signup } from './Pages/Signup';
 import { Appointment } from './Pages/Appointment';
 import { Hospital } from './Pages/Hospital';
+import { Passwordreset } from './Pages/Passwordreset';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path='/appointment' element={<Appointment/>}></Route>
           <Route path="/hospital" element={<Hospital/>}></Route>
+          <Route path='/passwordreset' element={<Passwordreset/>}></Route>
         </Routes>
         <Footer/>
     </div>

@@ -31,7 +31,7 @@ export const Navbar = () => {
 
   return (
     <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center">
-      <div className="w-full max-w-[1200px] p-3 text-white items-center grid grid-cols-12 gap-4">
+      <div className="w-full max-w-[1536px] p-3 text-white items-center grid grid-cols-12 gap-4">
         {/* Logo */}
         <div className="col-span-6 sm:col-span-4 md:col-span-6 lg:col-span-4 text-2xl sm:text-3xl">
           <Link to="/landingpage">BLOODSYNC</Link>

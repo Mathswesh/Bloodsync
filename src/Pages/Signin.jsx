@@ -63,9 +63,9 @@ export const Signin = () => {
               />
               <span className="ml-2 text-gray-600">Remember me</span>
             </label>
-            <a href="#" className="text-blue-600 hover:underline">
-              Forgot password?
-            </a>
+            <div className="text-sm sm:text-base text-blue-600 hover:underline">
+              <Link to="/passwordreset">Forgot password?</Link> 
+            </div>
           </div>
 
           {/* Submit Button */}
