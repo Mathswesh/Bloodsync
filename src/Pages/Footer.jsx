@@ -51,15 +51,17 @@ export const Footer = () => {
                             Follow us
                             <div className="w-[85px] h-[2px] bg-red-600 mx-auto lg:mx-0"></div>
                         </li>
-                        <li className="mt-2 rounded-full w-9 h-9 bg-white text-red-950 items-center flex justify-center">
-                            <i className="fa-brands fa-instagram"></i>
-                        </li>
-                        <li className="mt-2 rounded-full w-9 h-9 bg-white text-red-950 items-center flex justify-center">
-                            <i className="fa-brands fa-linkedin"></i>
-                        </li>
-                        <li className="mt-2 rounded-full w-9 h-9 bg-white text-red-950 items-center flex justify-center">
-                            <i className="fa-brands fa-github"></i>
-                        </li>
+                        <ul className='flex'>
+                            <li className="mt-2 ml-2 rounded-full w-9 h-9 bg-white text-red-950 items-center flex justify-center">
+                                <i className="fa-brands fa-instagram"></i>
+                            </li>
+                            <li className="mt-2 ml-2 rounded-full w-9 h-9 bg-white text-red-950 items-center flex justify-center">
+                                <i className="fa-brands fa-linkedin"></i>
+                            </li>
+                            <li className="mt-2 ml-2 rounded-full w-9 h-9 bg-white text-red-950 items-center flex justify-center">
+                                <i className="fa-brands fa-github"></i>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
             </div>
