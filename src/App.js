@@ -9,6 +9,7 @@ import { Hospital } from './Pages/Hospital';
 import { Passwordreset } from './Pages/Passwordreset';
 import Otppage from './Pages/Otppage';
 import Newpassword from './Pages/Newpassword';
+import { Hospitallist } from './Pages/Hospitallist';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,8 @@ function App() {
           <Route path='/passwordreset' element={<Passwordreset/>}></Route>
           <Route path="/otppage" element={<Otppage/>}></Route>
           <Route path='/newpassword' element={<Newpassword/>}></Route>
+          <Route path='/hospitallist' element={<Hospitallist/>}></Route>
+          
         </Routes>
         <Footer/>
     </div>

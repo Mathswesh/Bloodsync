@@ -30,8 +30,8 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center">
-      <div className="w-full max-w-[1536px] p-3 text-white items-center grid grid-cols-12 gap-4">
+    <div className="font-serif text-white bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center">
+      <div className="w-full max-w-[1536px] p-3 items-center grid grid-cols-12 gap-4">
         {/* Logo */}
         <div className="col-span-6 sm:col-span-4 md:col-span-6 lg:col-span-4 text-2xl sm:text-3xl">
           <Link to="/landingpage">BLOODSYNC</Link>
@@ -40,8 +40,7 @@ export const Navbar = () => {
         {/* Main Links */}
         <div className="hidden sm:col-span-5 md:col-span-5 lg:col-span-5 xl:col-span-6 sm:flex justify-between text-sm md:text-lg">
           <ul className="flex space-x-4">
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/hospital">Hospital</Link></li>
+            <li><Link to="/hospitallist">Hospitals</Link></li>
             <li><Link to="/appointment">Appointment</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>
           </ul>
@@ -51,7 +50,14 @@ export const Navbar = () => {
         <div className="col-span-6 sm:col-span-3 md:col-span-2 lg:col-span-1 flex justify-end items-center space-x-4">
           {/* Hamburger Menu */}
           <button onClick={toggleSidebar} className="text-xl">
-            <i className="fa-solid fa-bars"></i>
+            {
+            isOpen==true
+            ?
+            <i class="fa-solid fa-circle-xmark text-3xl"></i> 
+            : 
+            <i className="fa-solid fa-bars text-3xl"></i>
+
+            }
           </button>
 
           {/* User Dropdown */}
@@ -99,7 +105,7 @@ export const Navbar = () => {
         <ul className="p-4 text-white space-y-4 text-base">
           <li>
             <button onClick={toggleSidebar} className="text-xl">
-              <i className="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-xmark"></i>
             </button>
           </li>
           <li><Link to="/home" className="block hover:bg-cyan-700 p-2 rounded">Home</Link></li>
