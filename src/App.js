@@ -10,6 +10,9 @@ import { Passwordreset } from './Pages/Passwordreset';
 import Otppage from './Pages/Otppage';
 import Newpassword from './Pages/Newpassword';
 import { Hospitallist } from './Pages/Hospitallist';
+import ProfileForm from './Pages/ProfileForm';
+import DateTimeForm from './Pages/DateTimeForm';
+import Dashboard from './Pages/Dashboard';
 function App() {
   return (
     <div className="App">
@@ -25,7 +28,9 @@ function App() {
           <Route path="/otppage" element={<Otppage/>}></Route>
           <Route path='/newpassword' element={<Newpassword/>}></Route>
           <Route path='/hospitallist' element={<Hospitallist/>}></Route>
-          
+          <Route path='/profileform' element={<ProfileForm/>}></Route>
+          <Route path='/datetimeform' element={<DateTimeForm/>}></Route>
+          <Route path='/dashboard' element={<Dashboard/>}></Route>
         </Routes>
         <Footer/>
     </div>

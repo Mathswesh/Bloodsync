@@ -1,6 +1,11 @@
 import {myaxios} from './helper'
 
-export const signin = (data)=>{
+export const signupuser = (data)=>{
+    return myaxios.post("/signup",data)
+    .then((response)=>response.data)
+}
+
+export const signinuser = async (data)=>{
     return myaxios.post("/",data)
     .then((response)=>response.data)
 }

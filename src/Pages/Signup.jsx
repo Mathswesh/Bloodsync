@@ -1,19 +1,15 @@
-import React, {useState , useEffect} from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
-import { signin } from '../services/userservice'
+import { signupuser } from '../services/userservice'
 import { Link } from 'react-router-dom'
-import { CustomLoder } from './CustomLoder'
 export const Signup = () => {
   
-  // method 1
-  // const [isLoding, setisLoding] = useState(false);
-   
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  
+  const { register, handleSubmit } = useForm()
 
   const submitHandler = async (data) => {
-    // console.log(data)
-    // setisLoding(true);
-    signin(data)
+    console.log(data)
+    signupuser(data)
       .then((resp) => { 
         console.log(resp)
         console.log("Done it is.")
@@ -21,24 +17,8 @@ export const Signup = () => {
       .catch((errors) => {
         console.log("error", errors)
       })
-      // setisLoding(false);
   }
 
-  // method 2
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate a data fetch
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000); // 3 seconds
-    
-    return () => clearTimeout(timer); // Cleanup timer
-  }, []);
-
-  if (isLoading) {
-    return <CustomLoder />;
-  }
   
   return (
     <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen">
@@ -106,7 +86,19 @@ export const Signup = () => {
               {...register("password")}
             />
           </div>
-
+          <div>
+            <label htmlFor="lastname" className="block text-sm sm:text-base font-medium text-gray-700">
+              Role
+            </label>
+            <input
+              type="text"
+              id="role"
+              name="role"
+              required
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              {...register("role")}
+            />
+          </div>
           {/* Remember Me and Forgot Password */}
           <div className="flex items-center justify-between">
             <label className="flex items-center">
@@ -120,6 +112,7 @@ export const Signup = () => {
               <Link to="/passwordreset">Forgot password?</Link> 
             </div>
           </div>
+          
 
           {/* Submit Button */}
           <div>

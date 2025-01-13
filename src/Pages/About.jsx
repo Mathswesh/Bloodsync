@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col items-center py-8">
+    <div className="bg-[#9db4c0] min-h-screen flex flex-col items-center py-8">
       {/* Intro Section */}
       <motion.div
         className="max-w-4xl text-center"

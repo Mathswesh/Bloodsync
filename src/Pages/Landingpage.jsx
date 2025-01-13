@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import img3 from '../assets/images/img1.png';
+// import img3 from '../assets/images/img1.png';
+import img3 from '../assets/images/image.png';
 import { Getapp } from './Getapp';
 import { About } from './About';
 import { motion, useAnimation, useInView } from 'framer-motion';
@@ -21,16 +22,39 @@ export const Landingpage = () => {
   };
 
   return (
-    <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center overflow-x-hidden">
+    <div className="font-serif bg-[#9db4c0] flex justify-center overflow-x-hidden">
       <div className="w-full max-w-[1536px] px-4">
+
+          <div class="relative h-[500px] w-full flex justify-center items-center">
+          <img src={img3} alt="" className="w-full max-h-full max-w-full sm:max-w-[400px] md:max-w-[500px] h-auto" />
+          
+          {/* <img 
+            src={img3} 
+            alt="Background" 
+            class="absolute inset-0 h-full w-full object-cover"
+          /> */}
+          <div class="absolute inset-0 backdrop-blur-sm flex items-center justify-center">
+            <h1 class="text-white text-4xl font-bold sm:text-6xl">
+              BloodSync
+            </h1>
+          </div>
+        </div>
         {/* Hero Section */}
-        <div className="flex flex-col md:flex-row md:h-[500px]">
+        {/* <div className="flex flex-col md:flex-row md:h-[500px]">
+          <motion.div
+              variants={sectionVariants}
+              initial="hidden"
+              animate={mainControl}
+              className="flex items-center justify-center md:justify-end mt-6 md:mt-0 md:w-1/2 relative"
+            >
+              <img src={img3} alt="" className="w-full max-w-[600px] sm:max-w-[400px] md:max-w-[500px] h-auto" />
+          </motion.div>
           <motion.div
             ref={ref}
             variants={sectionVariants}
             initial="hidden"
             animate={mainControl}
-            className="text-cyan-300 mt-6 md:mt-[50px] md:w-1/2"
+            className="text-black mt-6 md:mt-[50px] md:w-1/2 relative z-20"
           >
             <h1 className="mt-[20px] text-lg sm:text-xl md:text-2xl">Blood Donate Awareness</h1>
             <h2 className="mt-2 text-xl sm:text-2xl md:text-4xl">"Your blood donation can give a</h2>
@@ -39,20 +63,11 @@ export const Landingpage = () => {
               Blood donation is a simple act of kindness that can save lives and bring hope to those in need. By donating
               blood, you help ensure a steady supply for emergencies and critical medical treatments.
             </p>
-            <button className="mt-6 text-sm sm:text-base md:text-lg bg-cyan-300 text-black rounded-3xl px-6 py-2">
+            <button className="mt-6 text-sm sm:text-base md:text-lg bg-[#027c68] text-white rounded-3xl px-6 py-2">
               Get Started
             </button>
-          </motion.div>
-
-          <motion.div
-            variants={sectionVariants}
-            initial="hidden"
-            animate={mainControl}
-            className="flex items-center justify-center md:justify-end mt-6 md:mt-0 md:w-1/2"
-          >
-            <img src={img3} alt="" className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] h-auto" />
-          </motion.div>
-        </div>
+          </motion.div>          
+        </div> */}
 
         {/* Marquee */}
         <motion.div
@@ -74,7 +89,7 @@ export const Landingpage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-red-800 w-full h-[100px] flex flex-col justify-center items-center text-center rounded"
+              className="bg-[#027c68] w-full h-[100px] flex flex-col justify-center items-center text-center rounded"
             >
               <i className={`fa-solid ${index === 0 ? "fa-hospital" : index === 1 ? "fa-droplet" : "fa-user-doctor"} text-white text-xl sm:text-2xl mb-2`}></i>
               <h3 className="text-sm sm:text-lg text-white">23598</h3>

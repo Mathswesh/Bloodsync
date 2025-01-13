@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { signin } from '../services/userservice';
+import {signinuser} from '../services/userservice'
 import { Link } from 'react-router-dom';
 
 export const Signin = () => {
@@ -8,7 +8,7 @@ export const Signin = () => {
 
   const submintHandler = async (data) => {
     console.log(data);
-    signin(data)
+    signinuser(data)
       .then((resp) => {
         console.log(resp);
         console.log("Done it is.");
