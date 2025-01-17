@@ -35,7 +35,7 @@ const HospitalCard = ({ name, index }) => {
 // The list component
 export const Hospitallist = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-[50px] bg-[#9db4c0]">
       {hospitals.map((hospital, index) => (
         <HospitalCard key={index} name={hospital} index={index} />
       ))}

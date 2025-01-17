@@ -9,6 +9,8 @@ import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
+import ScrollToTop from './ScrollToTop';
+import ScrollHeaderBar from './ScrollHeaderBar';
 
 export const Navbar = () => {
   // Sidebar
@@ -38,7 +40,8 @@ export const Navbar = () => {
 
   return (
     <StyledWrapper>
-      <div className="navwrap">
+      <div className="h-6 bg-[#9db4c0]"></div>
+      <div className="navwrap bg-[#9db4c0]">
         <motion.div
           className="button-container"
           whileHover={{ scale: 1.05 }}
@@ -57,10 +60,12 @@ export const Navbar = () => {
             {isOpen ? <CloseIcon /> : <FormatListBulletedIcon />}
           </button>
         </motion.div>
+        <ScrollToTop/>
+        <ScrollHeaderBar/>
         {/* Sidebar */}
         <motion.div
           id="sidebar"
-          className={`backdrop-blur-2xl fixed left-0 top-0 h-full w-64 shadow-lg z-20 ${isOpen ? 'open' : 'closed'}`}
+          className={`backdrop-blur-2xl fixed z-20 left-0 top-0 h-full w-64 shadow-lg  ${isOpen ? 'open' : 'closed'}`}
           initial={{ x: '-100%' }}
           animate={{ x: isOpen ? '0%' : '-100%' }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -72,17 +77,17 @@ export const Navbar = () => {
               </button>
             </li>
             <li><Link to="/landingpage" className="block hover:bg-cyan-700 p-2 rounded">Home</Link></li>
+            <li><Link to="/addhospitalform" className="block hover:bg-cyan-700 p-2 rounded">Add Hospital</Link></li>
             <li><Link to="/contact" className="block hover:bg-cyan-700 p-2 rounded">Contact</Link></li>
-            <li><Link to="/hospital" className="block hover:bg-cyan-700 p-2 rounded">Hospital</Link></li>
+            <li><Link to="/hospitallist" className="block hover:bg-cyan-700 p-2 rounded">Hospitals</Link></li>
             <li><Link to="/appointment" className="block hover:bg-cyan-700 p-2 rounded">Appointment</Link></li>
-            <li><Link to="/dashboard" className="block hover:bg-cyan-700 p-2 rounded">Dashboard</Link></li>
+            <li><Link to="/hospitaldashboard" className="block hover:bg-cyan-700 p-2 rounded">Dashboard</Link></li>
             <li><Link to="/profile" className="block hover:bg-cyan-700 p-2 rounded">Profile</Link></li>
             <li><Link to="/signin" className="block hover:bg-cyan-700 p-2 rounded">Sign In</Link></li>
             <li><Link to="/signup" className="block hover:bg-cyan-700 p-2 rounded">Sign Up</Link></li>
             <li><Link to="/certificate" className="block hover:bg-cyan-700 p-2 rounded">Certificate</Link></li>
             <li><Link to="/reviews" className="block hover:bg-cyan-700 p-2 rounded">Reviews</Link></li>
             <li><Link to="/publiccorner" className="block hover:bg-cyan-700 p-2 rounded">Public Corner</Link></li>
-            <li><Link to="/payment" className="block hover:bg-cyan-700 p-2 rounded">Payment</Link></li>
             <li><Link to="/chatbot" className="block hover:bg-cyan-700 p-2 rounded">Chatbot</Link></li>
           </ul>
         </motion.div>
@@ -97,7 +102,6 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: space-around;
     position: relative;
-    top: 20px;
     z-index: 10;
   }
   .button-container {

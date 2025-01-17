@@ -26,15 +26,15 @@ export const Landingpage = () => {
       <div className="w-full max-w-[1536px] px-4">
 
           <div class="relative h-[500px] w-full flex justify-center items-center">
-          <img src={img3} alt="" className="w-full max-h-full max-w-full sm:max-w-[400px] md:max-w-[500px] h-auto" />
-          
+          {/* <img src={img3} alt="" className="w-full max-h-full max-w-full sm:max-w-[400px] md:max-w-[500px] h-auto" />
+           */}
           {/* <img 
             src={img3} 
             alt="Background" 
             class="absolute inset-0 h-full w-full object-cover"
           /> */}
-          <div class="absolute inset-0 backdrop-blur-sm flex items-center justify-center">
-            <h1 class="text-white text-4xl font-bold sm:text-6xl">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <h1 class="text-black text-4xl font-bold sm:text-6xl">
               BloodSync
             </h1>
           </div>

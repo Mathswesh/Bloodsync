@@ -131,7 +131,7 @@ export const Hospital = () => {
   };
 
   return (
-    <div className="font-serif min-h-screen bg-gradient-to-r from-[#6f0000] to-[#200122] flex justify-center overflow-x-hidden pt-[100px]">
+    <div className="font-serif min-h-screen bg-[#9db4c0] flex justify-center overflow-x-hidden p-[100px]">
       <div className="container p-4 shadow-lg rounded-3xl flex-row justify-center items-center bg-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full h-auto">
         <h3 className="text-xl font-bold text-center mb-4">Select From Here</h3>
         <form onSubmit={handleSubmit(submitHandler)}>
@@ -226,7 +226,7 @@ export const Hospital = () => {
             whileTap={{ scale: 0.95 }}
             className="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition"
           >
-            <Link to="/profileform">Next</Link>
+            <Link to="/blooddonationform">Next</Link>
           </motion.button>
         </form>
       </div>

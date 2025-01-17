@@ -19,7 +19,7 @@ export const Signin = () => {
   };
 
   return (
-    <div className="font-serif bg-gradient-to-r from-[#6f0000] to-[#200122] flex items-center justify-center min-h-screen px-4">
+    <div className="font-serif bg-[#9db4c0] flex items-center justify-center min-h-screen px-4">
       <div className="w-full max-w-sm bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-xl md:text-2xl font-bold text-center text-gray-800">Sign In</h2>
         <p className="text-sm text-gray-600 text-center mb-6">Welcome back! Please enter your details.</p>
@@ -72,7 +72,7 @@ export const Signin = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="w-full bg-[#027c68] text-white py-2 px-4 rounded-lg shadow hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Sign In
             </button>

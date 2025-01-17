@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import { Link , Route , Routes } from "react-router-dom";
+import {Addevent} from './Addevent'
 const Dashboard = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -9,30 +10,28 @@ const Dashboard = () => {
         initial={{ x: -200 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="hidden md:flex flex-col bg-blue-600 text-white w-64 p-6 space-y-6"
+        className="hidden md:flex flex-col bg-blue-600 text-white w-64 p-6 space-y-6 fixed z-10 h-screen top-0"
       >
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <nav>
           <ul className="space-y-4">
             <li className="hover:bg-blue-500 p-3 rounded-lg cursor-pointer">
-              Home
+              <Link>Home</Link>
             </li>
             <li className="hover:bg-blue-500 p-3 rounded-lg cursor-pointer">
-              Analytics
+              <Link to="/addevent">Add Events</Link>
             </li>
             <li className="hover:bg-blue-500 p-3 rounded-lg cursor-pointer">
-              Reports
+              <Link>Reports</Link>
             </li>
             <li className="hover:bg-blue-500 p-3 rounded-lg cursor-pointer">
-              Settings
+              <Link>Settings</Link>
             </li>
           </ul>
         </nav>
       </motion.aside>
 
-      {/* Main Content */}
       <div className="flex flex-col flex-1">
-        {/* Header */}
         <motion.header
           initial={{ y: -100 }}
           animate={{ y: 0 }}
@@ -44,16 +43,14 @@ const Dashboard = () => {
             Menu
           </button>
         </motion.header>
-
-        {/* Content */}
-        <motion.main
+        
+       {/* <motion.main
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="p-6"
+          className="p-6 "
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Cards */}
             {[1, 2, 3, 4, 5, 6].map((card) => (
               <motion.div
                 key={card}
@@ -67,6 +64,7 @@ const Dashboard = () => {
             ))}
           </div>
         </motion.main>
+        */}
       </div>
     </div>
   );

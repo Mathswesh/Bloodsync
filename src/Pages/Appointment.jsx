@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Appointment = () => {
   return (
-    <div className="font-serif min-h-screen bg-gradient-to-r from-[#6f0000] to-[#200122] flex pt-[50px] justify-center px-4 sm:px-6 lg:px-8">
+    <div className="p-[50px] font-serif min-h-screen bg-[#9db4c0] flex justify-center px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-4 w-full max-w-5xl">
         {[
           "Blood Donate Camp",
@@ -21,7 +21,7 @@ export const Appointment = () => {
             </div>
             <div className="col-span-2 flex justify-center">
               <Link to="/hospital">
-                <button className="btn bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-all">
+                <button className="btn bg-[#027c68] text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-all">
                   Check
                 </button>
               </Link>
