@@ -7,10 +7,10 @@ export const Appointment = () => {
       <div className="grid grid-cols-1 gap-4 w-full max-w-5xl">
         {[
           "Blood Donate Camp",
-          "Eye Check Camp",
-          "Dental Checkup Camp",
-          "Hemoglobin Checkup Camp",
-          "Ayurvedic Health Camp",
+          // "Eye Check Camp",
+          // "Dental Checkup Camp",
+          // "Hemoglobin Checkup Camp",
+          // "Ayurvedic Health Camp",
         ].map((camp, index) => (
           <div
             key={index}

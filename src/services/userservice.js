@@ -1,9 +1,7 @@
 import axios from 'axios'
 
-import {myaxios} from './helper'
-
-export const signupuser = (data)=>{
-    return myaxios.post("/signup",data)
+export const signupuser = async (data)=>{
+    return axios.post("http://localhost:3000/signup",data)
     .then((response)=>response.data)
 }
 
@@ -16,16 +14,28 @@ export const userregistration = async (data)=>{
     .then((response)=>response.data)
 }
 
-export const hospitalpost = (data) => {
-    return myaxios.post("/hospital/add",data)
+export const hospitalpost = async (data) => {
+    return axios.post("http://localhost:3000/hospital/add",data)
     .then((response)=> response.data)
 }
 
-export const hospitalregestrationpost = (data) => {
+export const hospitalregestrationpost = async (data) => {
     return axios.post("http://localhost:3000/hospitalregistration",data)
     .then((response)=> response.data)
 }
 
-export const hospitalregestrationloginpost = (data) => {
+export const hospitalregestrationloginpost = async (data) => {
     return axios.post("http://localhost:3000/hospitalregistrationsignin",data)
+}
+
+export const addhospitaleventpost = async (data) => {
+    return axios.post("http://localhost:3000/event/add",data)
+}
+
+export const userhospitalareapost = async (data) => {
+    return axios.post("http://localhost:3000/userhospitalarea",data)
+}
+
+export const userprofilepost = async (data) =>{
+    return axios.post("http://localhost:3000/userformprofile",data)
 }

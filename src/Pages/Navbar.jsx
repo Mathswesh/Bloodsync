@@ -54,14 +54,14 @@ export const Navbar = () => {
             <Link to="/hospitallist"><BookOnlineIcon /></Link>
           </button>
           <button className="button">
-            <Link to="/appointment"><NoteAltIcon/></Link>
+            <Link to="/appointment"><NoteAltIcon /></Link>
           </button>
           <button className="button" onClick={toggleSidebar}>
             {isOpen ? <CloseIcon /> : <FormatListBulletedIcon />}
           </button>
         </motion.div>
-        <ScrollToTop/>
-        <ScrollHeaderBar/>
+        <ScrollToTop />
+        <ScrollHeaderBar />
         {/* Sidebar */}
         <motion.div
           id="sidebar"
@@ -77,18 +77,23 @@ export const Navbar = () => {
               </button>
             </li>
             <li><Link to="/landingpage" className="block hover:bg-cyan-700 p-2 rounded">Home</Link></li>
+            <hr />
             <li><Link to="/addhospitalform" className="block hover:bg-cyan-700 p-2 rounded">Add Hospital</Link></li>
-            <li><Link to="/contact" className="block hover:bg-cyan-700 p-2 rounded">Contact</Link></li>
-            <li><Link to="/hospitallist" className="block hover:bg-cyan-700 p-2 rounded">Hospitals</Link></li>
-            <li><Link to="/appointment" className="block hover:bg-cyan-700 p-2 rounded">Appointment</Link></li>
+            <li><Link to="/addhospitalevent" className="block hover:bg-cyan-700 p-2 rounded">Add Hospital Event</Link></li>
             <li><Link to="/hospitaldashboard" className="block hover:bg-cyan-700 p-2 rounded">Dashboard</Link></li>
-            <li><Link to="/profile" className="block hover:bg-cyan-700 p-2 rounded">Profile</Link></li>
-            <li><Link to="/signin" className="block hover:bg-cyan-700 p-2 rounded">Sign In</Link></li>
+            <hr />
             <li><Link to="/signup" className="block hover:bg-cyan-700 p-2 rounded">Sign Up</Link></li>
-            <li><Link to="/certificate" className="block hover:bg-cyan-700 p-2 rounded">Certificate</Link></li>
+            {/* <li><Link to="/signin" className="block hover:bg-cyan-700 p-2 rounded">Sign In</Link></li> */}
+            <li><Link to="/appointment" className="block hover:bg-cyan-700 p-2 rounded">Appointment</Link></li>
+            {/* <li><Link to="/profile" className="block hover:bg-cyan-700 p-2 rounded">Profile</Link></li> */}
+            <hr />
             <li><Link to="/reviews" className="block hover:bg-cyan-700 p-2 rounded">Reviews</Link></li>
-            <li><Link to="/publiccorner" className="block hover:bg-cyan-700 p-2 rounded">Public Corner</Link></li>
-            <li><Link to="/chatbot" className="block hover:bg-cyan-700 p-2 rounded">Chatbot</Link></li>
+            {/* <li><Link to="/contact" className="block hover:bg-cyan-700 p-2 rounded">Contact</Link></li> */}
+            {/* <li><Link to="/hospitallist" className="block hover:bg-cyan-700 p-2 rounded">Hospitals</Link></li> */}
+            {/* <li><Link to="/profile" className="block hover:bg-cyan-700 p-2 rounded">Profile</Link></li> */}
+            {/* <li><Link to="/certificate" className="block hover:bg-cyan-700 p-2 rounded">Certificate</Link></li> */}
+            {/* <li><Link to="/publiccorner" className="block hover:bg-cyan-700 p-2 rounded">Public Corner</Link></li> */}
+            {/* <li><Link to="/chatbot" className="block hover:bg-cyan-700 p-2 rounded">Chatbot</Link></li> */}
           </ul>
         </motion.div>
       </div>
@@ -233,7 +238,7 @@ const StyledWrapper = styled.div`
 //   .navwrap{
 //     display:flex;
 //     align-items: center;
-//     justify-content: space-around;  
+//     justify-content: space-around;
 //     position:relative;
 //     top:20px;
 //     z-index:10;

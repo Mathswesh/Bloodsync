@@ -11,8 +11,7 @@ import Otppage from './Pages/Otppage';
 import Newpassword from './Pages/Newpassword';
 import { Hospitallist } from './Pages/Hospitallist';
 import ProfileForm from './Pages/ProfileForm';
-import DateTimeForm from './Pages/DateTimeForm';
-import Dashboard from './Pages/Dashboard';
+import Dashboard, { AppDashboard } from './Pages/AppDashboard';
 import BloodDonationForm from './Pages/BloodDonationForm';
 import ReviewPage from './Pages/ReviewPage';
 import ContactUs from './Pages/ContactUs';
@@ -20,6 +19,8 @@ import { AddHospital } from './Pages/AddHospital';
 import { HospitalDashboard } from './Pages/HospitalDashboard';
 import { AddHospitalSignin } from './Pages/AddHospitalSignin';
 import InPageNavigation from './Pages/InpageNavigation';
+import { AddHospitalEvent } from './Pages/AddHospitalEvent';
+import { UserEventShowcase } from './Pages/UserEventShowcase';
 function App() {
   return (
     <div className="App">
@@ -37,14 +38,16 @@ function App() {
         <Route path='/newpassword' element={<Newpassword />}></Route>
         <Route path='/hospitallist' element={<Hospitallist />}></Route>
         <Route path='/profileform' element={<ProfileForm />}></Route>
-        <Route path='/datetimeform' element={<DateTimeForm />}></Route>
-        <Route path='/dashboard' element={<Dashboard />}></Route>
+         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/blooddonationform' element={<BloodDonationForm />}></Route>
         <Route path='reviews' element={<ReviewPage />}></Route>
         <Route path='/contact' element={<ContactUs />}></Route>
         <Route path='/hospitaldashboard' element={<HospitalDashboard />}></Route>
         <Route path='/addhospitalsignin' element={<AddHospitalSignin />}></Route>
         <Route path='/inpagenavigation' element={<InPageNavigation />}></Route>
+        <Route path='/addhospitalevent' element={<AddHospitalEvent />}></Route>
+        <Route path='/usereventshowcase' element={<UserEventShowcase/>}></Route>
+        {/* <Route path='/appdashboard' element={<AppDashboard/>}></Route> */}
       </Routes>
       <Footer />
     </div>

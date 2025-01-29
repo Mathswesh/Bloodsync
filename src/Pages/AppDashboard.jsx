@@ -1,3 +1,77 @@
+// import React from "react";
+// import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
+
+// export const AppDashboard = () => {
+//   return (
+//     <Router>
+//       <div className="min-h-screen bg-gray-100">
+//         <nav className="bg-blue-600 text-white p-4">
+//           <ul className="flex space-x-4">
+//             <li>
+//               <Link to="/" className="hover:underline">
+//                 Home
+//               </Link>
+//             </li>
+//             <li>
+//               <Link to="/dashboard" className="hover:underline">
+//                 Dashboard
+//               </Link>
+//             </li>
+//           </ul>
+//         </nav>
+//         <main className="p-6">
+//           <Routes>
+//             <Route path="/" element={<Home />} />
+//             <Route path="/dashboard" element={<Dashboard />}>
+//               <Route path="overview" element={<Overview />} />
+//               <Route path="settings" element={<Settings />} />
+//             </Route>
+//           </Routes>
+//         </main>
+//       </div>
+//     </Router>
+//   );
+// };
+
+// const Home = () => (
+//   <div className="text-center">
+//     <h1 className="text-2xl font-bold">Welcome to the Home Page</h1>
+//     <p className="mt-4">Navigate to the dashboard to explore nested routes.</p>
+//   </div>
+// );
+
+// const Dashboard = () => (
+//   <div className="space-y-4">
+//     <h1 className="text-xl font-semibold">Dashboard</h1>
+//     <nav className="flex space-x-4">
+//       <Link to="overview" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+//         Overview
+//       </Link>
+//       <Link to="settings" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+//         Settings
+//       </Link>
+//     </nav>
+//     <div className="mt-6 p-4 bg-white rounded shadow">
+//       <Outlet />
+//     </div>
+//   </div>
+// );
+
+// const Overview = () => (
+//   <div>
+//     <h2 className="text-lg font-medium">Overview</h2>
+//     <p>This is the overview section of the dashboard.</p>
+//   </div>
+// );
+
+// const Settings = () => (
+//   <div>
+//     <h2 className="text-lg font-medium">Settings</h2>
+//     <p>This is the settings section of the dashboard.</p>
+//   </div>
+// );
+
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Link , Route , Routes } from "react-router-dom";
@@ -10,7 +84,7 @@ const Dashboard = () => {
         initial={{ x: -200 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="hidden md:flex flex-col bg-blue-600 text-white w-64 p-6 space-y-6 fixed z-10 h-screen top-0"
+        className="hidden md:flex flex-col bg-blue-600 text-white w-64 p-6 space-y-6 fixed h-screen top-0"
       >
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <nav>

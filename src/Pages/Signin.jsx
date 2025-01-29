@@ -1,21 +1,41 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import {signinuser} from '../services/userservice'
-import { Link } from 'react-router-dom';
+import { signinuser } from '../services/userservice';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Signin = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const navigate = useNavigate();
 
-  const submintHandler = async (data) => {
-    console.log(data);
-    signinuser(data)
-      .then((resp) => {
-        console.log(resp);
-        console.log("Done it is.");
-      })
-      .catch((errors) => {
-        console.log("error", errors);
-      });
+  // Function to set cookies
+  const setCookie = (name, value, days) => {
+    let expires = "";
+    if (days) {
+      let date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+  };
+
+  const submitHandler = async (data) => {
+    try {
+      const resp = await signinuser(data);
+      console.log(resp);
+
+      if (resp.token) {
+        // Store token in cookies for authentication
+        setCookie("authToken", resp.token, 7); // Store token for 7 days
+        console.log("Login successful. Token stored in cookies.");
+
+        // Navigate to landing page
+        navigate('/landingpage');
+      } else {
+        console.log("Login failed. No token received.");
+      }
+    } catch (error) {
+      console.log("Error during login", error);
+    }
   };
 
   return (
@@ -23,7 +43,7 @@ export const Signin = () => {
       <div className="w-full max-w-sm bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-xl md:text-2xl font-bold text-center text-gray-800">Sign In</h2>
         <p className="text-sm text-gray-600 text-center mb-6">Welcome back! Please enter your details.</p>
-        <form className="space-y-4" onSubmit={handleSubmit(submintHandler)}>
+        <form className="space-y-4" onSubmit={handleSubmit(submitHandler)}>
           {/* Email Input */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -64,7 +84,7 @@ export const Signin = () => {
               <span className="ml-2 text-gray-600">Remember me</span>
             </label>
             <div className="text-sm sm:text-base text-blue-600 hover:underline">
-              <Link to="/passwordreset">Forgot password?</Link> 
+              <Link to="/passwordreset">Forgot password?</Link>
             </div>
           </div>
 

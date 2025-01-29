@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { hospitalregestrationpost } from '../services/userservice';
+import { hospitalpost } from '../services/userservice';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { Link , useNavigate } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { GeoLocation } from './Geolocation';
 
 export const AddHospital = () => {
     const countries = {
@@ -335,7 +336,7 @@ export const AddHospital = () => {
   const submitHandler = async (data) => {
     console.log(data)
     try {
-      const response = await hospitalregestrationpost(data);
+      const response = await hospitalpost(data);
       console.log('Success:', response);
       navigate('/hospitaldashboard');
     } catch (error) {
@@ -491,7 +492,7 @@ export const AddHospital = () => {
             />
             {errors.contact && <p className="text-red-500">{errors.contact.message}</p>}
           </div>
-
+          
           {/* Submit Button */}
           <button
             type="submit"
@@ -510,6 +511,8 @@ export const AddHospital = () => {
           </motion.button>
         </form>
       </div>
+
+      <GeoLocation/>
     </div>
   );
 };

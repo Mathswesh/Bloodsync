@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import signupReducer from './slices/signupslice';
+// import signupReducer from './slices/signupslice';
 import hospitalReducer from './slices/hospitalslice';
-
+import userformReduce from  './slices/userformsslice'
 export const store = configureStore({
     reducer:{
-        singupdata: signupReducer,
+        userformdata: userformReduce,
         hospitaldata: hospitalReducer,
     },
 })

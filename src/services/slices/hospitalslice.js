@@ -3,7 +3,7 @@ import {createSlice , createAsyncThunk} from "@reduxjs/toolkit"
 export const fetchhospitaldata = createAsyncThunk(
     'fetchhospitaldata',
     async() => {
-        const response = await fetch("http://localhost:3001/hospital/gethospital")
+        const response = await fetch("http://localhost:3000/hospital/get")
         return await response.json()
     }
 )
@@ -16,6 +16,10 @@ const hospitalslice = createSlice({
         isError:false,
     },
     reducers:{
+        showhospital: (action,state) => {
+            console.log(action.payload,"hospital slice")
+            state.showhospital.push(action.payload)
+        }
     },
     extraReducers:(builder) => {
         builder.addCase(fetchhospitaldata.pending,(state,action) =>{

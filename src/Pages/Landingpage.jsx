@@ -4,6 +4,9 @@ import img3 from '../assets/images/image.png';
 import { Getapp } from './Getapp';
 import { About } from './About';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { LatestNews } from './LatestNews';
+import { ResearchApproach } from './ResearchApproach';
+import { ObjectivesPage} from './ObjectivesPage'
 
 export const Landingpage = () => {
   const ref = useRef(null);
@@ -97,7 +100,10 @@ export const Landingpage = () => {
             </motion.div>
           ))}
         </div>
+        <ObjectivesPage/>
         <About />
+        <ResearchApproach/>
+        <LatestNews/>
         <Getapp />
       </div>
     </div>
